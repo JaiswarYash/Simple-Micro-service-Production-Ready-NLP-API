@@ -1,0 +1,25 @@
+# --- Core API Framework ---
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+pydantic==2.9.2
+pydantic-settings==2.5.2
+
+# --- Machine Learning & NLP ---
+# Using CPU versions to keep Docker images lightweight (~1GB vs 5GB)
+transformers==4.44.2
+torch==2.4.1 --index-url https://download.pytorch.org/whl/cpu
+numpy==2.1.1
+scikit-learn==1.5.2
+
+# --- Production & Monitoring ---
+python-multipart==0.0.9
+loguru==0.7.2
+httpx==0.27.2
+
+# --- Testing ---
+pytest==8.3.3
+pytest-asyncio==0.24.0
+
+# --- Frontend Dependencies ---
+streamlit==1.38.0
+requests==2.32.3
