@@ -10,11 +10,15 @@ project_name = "app"
 list_of_files = [
     f"{project_name}/__init__.py",
     f"{project_name}/mian.py",
+    f"{project_name}/model.py",
+    f"{project_name}/schemas.py",
+    f"{project_name}/core/__init__.py",
     f"{project_name}/core/config.py",
-    f"{project_name}/core/model.py",
-    f"{project_name}/api/dependencies.py",
-    f"{project_name}/api/schemas.py",
     "tests/__init__.py",
+    "tests/test_api.py",
+    "tests/test_model.py",
+    "model_cache/",
+    ".dockerignore",
     "Dockerfile",
     "requirements.txt", 
 ]
