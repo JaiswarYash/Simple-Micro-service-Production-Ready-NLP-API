@@ -20,7 +20,10 @@ list_of_files = [
     "model_cache/",
     ".dockerignore",
     "Dockerfile",
+    "docker-compose.yml",
     "requirements.txt", 
+    "env.example",
+    ".env"
 ]
 
 for filepath in list_of_files:

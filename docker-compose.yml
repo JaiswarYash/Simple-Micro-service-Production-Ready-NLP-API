@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  nlp-api:
+    build: .
+    container_name: sentiment-analysis-service
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    volumes:
+      # This 'mounts' your local folder to the container.
+      # It ensures your downloaded model persists even if the container is deleted.
+      - ./model_cache:/app/model_cache
+    restart: always
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
